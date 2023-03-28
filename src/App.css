@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+:root {
+  --color-ocean: #416dea;
+  --color-grass: #3dd28d;
+  --color-submit: #8f0f9b;
+
+  --borderRadius: 36px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(247, 243, 243);
 }
 
-.App-link {
-  color: #61dafb;
+.main-div {
+  background-color: #575555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.raisedbox {
+  padding: 10px;
+  border: 1px solid #9c9a9a;
+  box-shadow: -1px 1px #9c9a9a, -2px 2px #9c9a9a, -3px 3px #9c9a9a,
+    -4px 4px #9c9a9a, -5px 5px #9c9a9a;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 50px;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  overflow: hidden;
+
+  margin: 10px;
+  padding: 12px 12px;
+
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+
+  color: #fff;
+  border: 0 none;
+  border-radius: var(--borderRadius);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+
+  box-shadow: 2px 5px 10px var(--color-smoke);
+}
+
+.button.-active {
+  color: var(--color-snow);
+  background: var(--color-grass);
+}
+.button.-listening {
+  color: var(--color-snow);
+  background: var(--color-grass);
+  flex: auto;
+}
+
+.button.-normal {
+  color: var(--color-snow);
+  background: var(--color-ocean);
+}
+.button.-submit {
+  color: var(--color-snow);
+  background: var(--color-submit);
+  flex: auto;
+}
+
+.textarea {
+  width: 70%;
+  height: 10rem;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.select-wrapper {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.select {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #444;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
